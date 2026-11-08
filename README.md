@@ -2,7 +2,8 @@
 
 A Codex workspace for investigating UniFi Network health, Wi-Fi, VLANs and event
 logs. The repository contains reusable instructions and logging tools. Local
-credentials, topology, device records and recovery data live outside Git.
+credentials, topology, device records and recovery data live in the ignored
+`local/` directory.
 
 ## Use with Codex
 
@@ -20,9 +21,10 @@ ln -s "$PWD/.agents/skills/unifi-network" "$HOME/.agents/skills/unifi-network"
 ## Local setup
 
 Keep controller addresses, API endpoints and links to local records in
-`~/.config/unifi/context.md`, with the API key in `~/.config/unifi/token`. Keep
-network notes, backups and exported reports under `~/.local/share/unifi`.
-`XDG_CONFIG_HOME` and `XDG_DATA_HOME` override those base directories when set.
+`local/context.md`, with the API key in `local/token`. Store network notes,
+backups, exported reports and historical records under `local/` as well.
+Create this private directory separately on each machine; Git does not include
+its contents.
 
 Use permissions `0700` for the private directories and `0600` for credentials and
 private records. The repository's Git ignore rules allow only reviewed source

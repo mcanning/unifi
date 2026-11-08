@@ -5,10 +5,12 @@ description: Investigate UniFi Network health, Wi-Fi, VLANs and event logs using
 
 # UniFi Network
 
-Read `${XDG_CONFIG_HOME:-$HOME/.config}/unifi/context.md` first to locate the
-controller, API endpoints, token file and relevant private records. If the local
-setup is missing, ask for the controller and credential location. Keep secrets
-and network-specific records out of this public skill.
+Resolve this skill directory's real path when accessed through a symlink. The
+workspace is three parent directories above that resolved directory.
+Read its ignored `local/context.md` first to locate the controller, API
+endpoints, token file and relevant private records. If the local setup is
+missing, ask for the controller and credential location. Keep secrets and
+network-specific records out of this public skill.
 
 Use read-only API requests and existing logs to answer questions. Apply changes
 only when requested, preserving a private recovery snapshot and verifying the
@@ -28,6 +30,6 @@ Use the existing monitoring and service state for the relevant component. Avoid
 restarting services or changing network settings merely to inspect them.
 
 Summarize findings with their evidence and practical uncertainty. Save durable
-network-specific findings, configuration exports and reports under
-`${XDG_DATA_HOME:-$HOME/.local/share}/unifi`, updating the private context when
+network-specific findings, configuration exports and reports under the
+workspace's ignored `local/` directory, updating the private context when
 their locations change. Publish only reviewed, reusable instructions and tools.
