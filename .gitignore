@@ -12,7 +12,5 @@
 !/.agents/skills/unifi-network/agents/
 /.agents/skills/unifi-network/agents/*
 !/.agents/skills/unifi-network/agents/openai.yaml
-!/elder/
-/elder/*
-!/elder/audit-health.sh
-!/elder/unifi-cef.logrotate
+!/audit-health.sh
+!/unifi-cef.logrotate

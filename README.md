@@ -30,16 +30,16 @@ files; extend that allowlist deliberately when adding reusable tools.
 
 ## Logging tools
 
-- `elder/audit-health.sh` reads local UniFi logging and host health. Run it only
+- `audit-health.sh` reads local UniFi logging and host health. Run it only
   when that investigation is needed; its output contains private operational
   details and belongs outside Git.
-- `elder/unifi-cef.logrotate` is a log rotation example retaining 30 compressed
+- `unifi-cef.logrotate` is a log rotation example retaining 30 compressed
   CEF logs and three raw logs. Review paths and ownership against the local host
   before installing it through the host's normal maintenance workflow.
 
 Validate the existing shell helper without running a live collection:
 
 ```sh
-bash -n elder/audit-health.sh
-shellcheck elder/audit-health.sh
+bash -n audit-health.sh
+shellcheck audit-health.sh
 ```
