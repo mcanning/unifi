@@ -1,0 +1,7 @@
+interface:
+  display_name: "UniFi Network"
+  short_description: "Investigate UniFi health and configuration"
+  default_prompt: "Use $unifi-network to investigate my UniFi setup using local private context and current read-only evidence."
+
+policy:
+  allow_implicit_invocation: true

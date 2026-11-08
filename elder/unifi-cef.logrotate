@@ -1,0 +1,19 @@
+/var/log/unifi/unifi.cef {
+    daily
+    rotate 30
+    compress
+    missingok
+    notifempty
+    copytruncate
+    su syslog syslog
+}
+
+/var/log/unifi/unifi.raw.log {
+    daily
+    rotate 3
+    compress
+    missingok
+    notifempty
+    copytruncate
+    su syslog syslog
+}
