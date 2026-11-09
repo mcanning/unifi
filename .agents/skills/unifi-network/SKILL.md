@@ -5,31 +5,19 @@ description: Investigate UniFi Network health, Wi-Fi, VLANs and event logs using
 
 # UniFi Network
 
-Resolve this skill directory's real path when accessed through a symlink. The
-workspace is three parent directories above that resolved directory.
-Read its ignored `local/context.md` first to locate the controller, API
-endpoints, token file and relevant private records. If the local setup is
-missing, ask for the controller and credential location. Keep secrets and
-network-specific records out of this public skill.
+Resolve this skill directory's symlinks. The workspace is three parent directories
+above the resolved folder. Read local/context.md there, then only relevant linked
+notes for the controller, endpoints, token file and private records. Ask for missing
+setup; historical notes do not establish current state.
 
-Use read-only API requests and existing logs to answer questions. Apply changes
-only when requested, preserving a private recovery snapshot and verifying the
-result. A question or proposed plan alone does not authorize a change.
+Questions use read-only requests and existing evidence. Network/host changes
+require a request to apply them; preserve a private recovery snapshot and verify
+the result. Never rerun historical change scripts or restart services to investigate.
 
-Read the token from its private file without printing it or placing its value in
-command arguments or tracked files. Prefer a private header file or standard
-input when passing credentials to native tools.
+Read credentials from their private file without printing them or placing values
+in command arguments, logs or Git. Use a private header file or standard input.
+Distinguish Network health, event logging and Protect clip backups.
 
-Use the local context's links to search historical notes by topic or date. Read
-the relevant sections rather than loading the entire history. Treat saved
-versions, topology and earlier findings as dated evidence; check current state
-before relying on them. Do not rerun historical change scripts to investigate.
-
-Distinguish controller health, network event logging and Protect clip backups.
-Use the existing monitoring and service state for the relevant component. Avoid
-restarting services or changing network settings merely to inspect them.
-
-Summarize findings with their evidence and practical uncertainty. Save durable
-network-specific findings, configuration exports and reports under the
-workspace's ignored `local/` directory, updating the private context when
-their locations change. Publish only reviewed, reusable instructions and tools.
+Save durable private findings, exports and reports under ignored local/ and update
+its context links. Publish only reviewed reusable tools/instructions. Report evidence
+and practical uncertainty.
